@@ -41,7 +41,7 @@ pipeline {
                 echo "Deploying the application..."
 
                 sh '''
-                    docker compose down || true
+                    docker compose down && true
                     docker compose up -d --build
                 '''
             }
